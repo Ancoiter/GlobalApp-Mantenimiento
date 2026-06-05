@@ -1,0 +1,12 @@
+{
+  "name": "GLOBALAPP+IA",
+  "short_name": "GLOBALAPP+IA",
+  "description": "PWA de mantenimiento industrial offline-first para GlobalTech Servicios Industriales SpA",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#071417",
+  "theme_color": "#0f766e",
+  "icons": [
+    { "src": "/globaltech-logo.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}
