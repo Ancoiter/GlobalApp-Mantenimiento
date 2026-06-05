@@ -1,0 +1,16 @@
+{
+  "name": "globalapp-ia",
+  "private": true,
+  "version": "0.1.0",
+  "description": "GLOBALAPP+IA - Plataforma PWA de mantenimiento industrial para GlobalTech Servicios Industriales SpA",
+  "scripts": {
+    "dev": "node scripts/serve-web.mjs",
+    "dev:api": "node apps/api/src/server.mjs",
+    "build": "node scripts/build-web.mjs && npm run build:shared && npm run build:ai",
+    "build:shared": "tsc -p packages/shared/tsconfig.json",
+    "build:ai": "tsc -p packages/ai/tsconfig.json",
+    "typecheck": "tsc -p packages/shared/tsconfig.json --noEmit && tsc -p packages/ai/tsconfig.json --noEmit",
+    "test": "node --test apps/api/src/server.test.mjs"
+  },
+  "engines": { "node": ">=20.0.0" }
+}
