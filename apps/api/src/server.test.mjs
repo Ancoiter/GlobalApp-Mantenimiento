@@ -19,7 +19,7 @@ test('health endpoint responds with service metadata', async () => {
     const payload = await response.json();
     assert.equal(response.status, 200);
     assert.equal(payload.ok, true);
-    assert.equal(payload.service, 'GLOBALAPP+IA API');
+    assert.equal(payload.service, 'FACTORY CHILE® API');
   });
 });
 
@@ -76,6 +76,6 @@ test('internal AI chat returns an assistant answer', async () => {
     });
     assert.equal(response.status, 200);
     const payload = await response.json();
-    assert.ok(payload.answer.includes('GlobalTech'));
+    assert.ok(payload.answer.includes('Factory Chile®'));
   });
 });

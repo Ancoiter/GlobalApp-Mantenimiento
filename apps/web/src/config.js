@@ -1,8 +1,8 @@
 export const companyConfig = {
-  tradeName: 'GLOBALAPP+IA',
-  legalName: 'GlobalTech Servicios Industriales SpA',
+  tradeName: 'FACTORY CHILE®',
+  legalName: 'Factory Chile®',
   slogan: 'Mantenimiento industrial en tus manos',
-  logoUrl: '/globaltech-logo.svg',
+  logoUrl: '/icon.svg',
   supportWhatsAppNumber: '56929467522',
   enableEcoKpis: true,
   colors: {
@@ -15,7 +15,7 @@ export const companyConfig = {
   },
   pdfTemplate: {
     title: 'Informe técnico de mantenimiento industrial',
-    footer: (year = new Date().getFullYear()) => `Desarrollado por GlobalTech Servicios Industriales SpA. Todos los derechos reservados © ${year}.`
+    footer: (year = new Date().getFullYear()) => `Desarrollado por Factory Chile®. Todos los derechos reservados © ${year}.`
   }
 };
 

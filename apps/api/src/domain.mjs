@@ -1,13 +1,13 @@
 export const clients = [{ id: 'cli-001', name: 'Minera Cordillera Norte', rut: '76.123.456-7', contactEmail: 'operaciones@cordillera.example', siteAddress: 'Faena Norte, Antofagasta' }];
 export const technicians = [
-  { id: 'tec-001', name: 'Camila Rojas', email: 'camila.rojas@globaltech.cl', specialties: ['Mecánica', 'Bombas'], active: true },
-  { id: 'tec-002', name: 'Diego Muñoz', email: 'diego.munoz@globaltech.cl', specialties: ['Eléctrica', 'Variadores'], active: true }
+  { id: 'tec-001', name: 'Camila Rojas', email: 'camila.rojas@factory.cl', specialties: ['Mecánica', 'Bombas'], active: true },
+  { id: 'tec-002', name: 'Diego Muñoz', email: 'diego.munoz@factory.cl', specialties: ['Eléctrica', 'Variadores'], active: true }
 ];
 export const contractors = [
   { id: 'con-001', companyName: 'Andes Mantención Especializada Ltda.', rut: '77.765.432-1', contactName: 'Luis Herrera', contactPhone: '+56 9 5555 0101', specialties: ['Soldadura HDPE', 'Montaje mecánico'], approved: true },
   { id: 'con-002', companyName: 'Norte Servicios Eléctricos SpA', rut: '76.998.120-3', contactName: 'María Vega', contactPhone: '+56 9 5555 0202', specialties: ['Tableros', 'Instrumentación'], approved: true }
 ];
-export const supervisors = [{ id: 'sup-001', name: 'Valentina Torres', email: 'valentina.torres@globaltech.cl', area: 'Mantenimiento Industrial' }];
+export const supervisors = [{ id: 'sup-001', name: 'Valentina Torres', email: 'valentina.torres@factory.cl', area: 'Mantenimiento Industrial' }];
 export const assets = [
   { id: 'act-001', clientId: 'cli-001', tag: 'P-204', name: 'Bomba centrífuga línea ácido', location: 'Planta SX', criticality: 'critical' },
   { id: 'act-002', clientId: 'cli-001', tag: 'CV-18', name: 'Correa transportadora alimentación', location: 'Chancado', criticality: 'high' }

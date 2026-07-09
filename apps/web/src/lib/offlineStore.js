@@ -1,4 +1,4 @@
-const DB_NAME = 'globalapp-ia-offline';
+const DB_NAME = 'factory-chile-offline';
 const DB_VERSION = 2;
 const STORES = {
   workOrders: 'pendingWorkOrders',

@@ -1,8 +1,8 @@
 {
-  "name": "globalapp-ia",
+  "name": "factory-chile",
   "private": true,
   "version": "0.1.0",
-  "description": "GLOBALAPP+IA - Plataforma PWA de mantenimiento industrial para GlobalTech Servicios Industriales SpA",
+  "description": "FACTORY CHILE® - Plataforma PWA de mantenimiento industrial para Factory Chile®",
   "scripts": {
     "dev": "node scripts/serve-web.mjs",
     "dev:api": "node apps/api/src/server.mjs",

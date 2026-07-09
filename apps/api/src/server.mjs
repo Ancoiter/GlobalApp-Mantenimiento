@@ -14,7 +14,7 @@ export function createServer() {
       if (request.method === 'OPTIONS') return sendJson(response, 204, null);
 
       const url = new URL(request.url ?? '/', `http://${request.headers.host ?? 'localhost'}`);
-      if (request.method === 'GET' && url.pathname === '/health') return sendJson(response, 200, { ok: true, service: 'GLOBALAPP+IA API', timestamp: new Date().toISOString() });
+      if (request.method === 'GET' && url.pathname === '/health') return sendJson(response, 200, { ok: true, service: 'FACTORY CHILE® API', timestamp: new Date().toISOString() });
       if (request.method === 'GET' && url.pathname === '/api/bootstrap') return sendJson(response, 200, { clients, technicians, contractors, supervisors, assets, inventory, incidents, workOrders });
       if (request.method === 'GET' && url.pathname === '/api/kpis') return sendJson(response, 200, calculateKpis({ incidents, workOrders, assets, inventory }));
       if (request.method === 'POST' && url.pathname === '/api/incidents') return createIncident(request, response);
@@ -35,7 +35,7 @@ async function createIncident(request, response) {
   const existingIndex = incidents.findIndex((incident) => incident.id === body.id);
   const incident = {
     ...body,
-    history: appendHistory(body.history, body.reporterId ?? 'field-user', 'created', 'Incidencia guardada en GLOBALAPP+IA.')
+    history: appendHistory(body.history, body.reporterId ?? 'field-user', 'created', 'Incidencia guardada en FACTORY CHILE®.')
   };
   if (existingIndex >= 0) incidents[existingIndex] = incident;
   else incidents.unshift(incident);
@@ -46,7 +46,7 @@ async function updateWorkOrder(request, response, id) {
   const body = await readJson(request);
   const index = workOrders.findIndex((order) => order.id === id);
   if (index === -1) return sendJson(response, 404, { message: 'Orden de trabajo no encontrada' });
-  workOrders[index] = { ...workOrders[index], ...body, history: appendHistory(body.history ?? workOrders[index].history, 'tec-001', 'sync', 'Orden actualizada desde GLOBALAPP+IA.') };
+  workOrders[index] = { ...workOrders[index], ...body, history: appendHistory(body.history ?? workOrders[index].history, 'tec-001', 'sync', 'Orden actualizada desde FACTORY CHILE®.') };
   sendJson(response, 200, workOrders[index]);
 }
 
@@ -113,5 +113,5 @@ function sendJson(response, status, payload) {
 }
 
 if (import.meta.url === `file://${process.argv[1]}`) {
-  createServer().listen(port, () => console.log(`GLOBALAPP+IA API escuchando en http://localhost:${port}`));
+  createServer().listen(port, () => console.log(`FACTORY CHILE® API escuchando en http://localhost:${port}`));
 }

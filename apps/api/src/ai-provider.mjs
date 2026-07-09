@@ -24,7 +24,7 @@ export function createMockAiProvider() {
   return {
     async generateMaintenanceReport({ workOrder, client, asset, contractor }) {
       return [
-        `Informe técnico GlobalTech para ${client.name}`,
+        `Informe técnico Factory Chile® para ${client.name}`,
         `Activo: ${asset.tag} - ${asset.name}`,
         `Orden: ${workOrder.title}`,
         `Contratista: ${contractor?.companyName ?? 'No asignado'}`,
@@ -37,7 +37,7 @@ export function createMockAiProvider() {
     },
     async chat({ question, context }) {
       return [
-        `Asistente IA GlobalTech (mock): ${question}`,
+        `Asistente IA Factory Chile® (mock): ${question}`,
         'Observación técnica: verificar condición del activo, seguridad y trazabilidad antes de ejecutar.',
         'Recomendación: generar OT, capturar evidencia, validar repuestos y documentar cierre.',
         `Contexto disponible: ${Object.keys(context ?? {}).join(', ') || 'sin contexto'}`
@@ -66,7 +66,7 @@ function createOpenAiCompatibleProvider({ provider, model, baseUrl, apiKey }) {
       body: JSON.stringify({
         model,
         messages: [
-          { role: 'system', content: 'Eres experto en mantenimiento industrial, seguridad operacional e informes técnicos GlobalTech.' },
+          { role: 'system', content: 'Eres experto en mantenimiento industrial, seguridad operacional e informes técnicos Factory Chile®.' },
           { role: 'user', content: photoDataUrl ? [{ type: 'text', text: prompt }, { type: 'image_url', image_url: { url: photoDataUrl } }] : prompt }
         ],
         temperature: 0.2
@@ -79,10 +79,10 @@ function createOpenAiCompatibleProvider({ provider, model, baseUrl, apiKey }) {
 
   return {
     async generateMaintenanceReport(payload) {
-      return complete(`Genera un informe técnico GlobalTech en español para esta orden de mantenimiento:\n${JSON.stringify(payload, null, 2)}`);
+      return complete(`Genera un informe técnico Factory Chile® en español para esta orden de mantenimiento:\n${JSON.stringify(payload, null, 2)}`);
     },
     async chat({ question, context }) {
-      return complete(`Responde como asistente interno de mantenimiento industrial GlobalTech. Ayuda con observaciones, recomendaciones, informes, diagnósticos y consultas operacionales.\nPregunta: ${question}\nContexto: ${JSON.stringify(context)}`);
+      return complete(`Responde como asistente interno de mantenimiento industrial Factory Chile®. Ayuda con observaciones, recomendaciones, informes, diagnósticos y consultas operacionales.\nPregunta: ${question}\nContexto: ${JSON.stringify(context)}`);
     },
     async diagnoseFailureFromPhoto({ asset, symptoms, photoDataUrl }) {
       const text = await complete(`Diagnostica esta falla industrial desde la imagen. Responde SOLO JSON con: likelyCause, criticalityLevel, riskLevel, operationalRisk, suggestedMaterials, technicalRecommendation, recommendedActions y confidence.\n${JSON.stringify({ asset, symptoms })}`, photoDataUrl);
