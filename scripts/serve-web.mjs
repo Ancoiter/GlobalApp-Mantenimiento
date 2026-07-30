@@ -15,7 +15,7 @@ http.createServer((request, response) => {
   if (!file.startsWith(root) || !existsSync(file)) file = join(root, 'index.html');
   response.writeHead(200, { 'Content-Type': types[extname(file)] ?? 'application/octet-stream' });
   createReadStream(file).pipe(response);
-}).listen(port, () => console.log(`GLOBALAPP+IA PWA escuchando en http://localhost:${port}`));
+}).listen(port, () => console.log(`FACTORY CHILE® PWA escuchando en http://localhost:${port}`));
 
 function proxyApi(clientRequest, clientResponse, url) {
   const proxyRequest = http.request({

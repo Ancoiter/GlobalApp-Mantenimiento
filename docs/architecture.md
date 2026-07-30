@@ -1,4 +1,4 @@
-# Arquitectura GLOBALAPP+IA
+# Arquitectura FACTORY CHILE®
 
 ## Principios
 
@@ -6,7 +6,7 @@
 2. **Dominio compartido:** modelos y contratos viven en `packages/shared` para evitar divergencia entre frontend y backend.
 3. **IA intercambiable:** `packages/ai` y `apps/api/src/ai-provider.mjs` exponen diagnóstico visual e informes con modo mock y adaptadores para OpenAI, LM Studio y Ollama.
 4. **Evidencia auditable:** cada incidencia y orden mantiene fotos antes/después, firma digital, GPS, historial técnico, timestamps y responsable.
-5. **Marca GlobalTech:** header corporativo, logo industrial, soporte WhatsApp, reporte de fallas con ticket y experiencia SaaS empresarial sin copiar marcas externas.
+5. **Marca Factory Chile®:** header corporativo, logo industrial, soporte WhatsApp, reporte de fallas con ticket y experiencia SaaS empresarial sin copiar marcas externas.
 
 ## Capas
 

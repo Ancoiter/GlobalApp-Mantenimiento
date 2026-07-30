@@ -1,10 +1,10 @@
-# GLOBALAPP+IA
+# FACTORY CHILE®
 
-Plataforma ejecutable de mantenimiento industrial para **GlobalTech Servicios Industriales SpA**.
+Plataforma ejecutable de mantenimiento industrial para **Factory Chile®**.
 
 ## Funciones implementadas
 
-- Identidad visual corporativa GlobalTech, header SaaS moderno, logo industrial y eslogan “Mantenimiento industrial en tus manos”.
+- Identidad visual corporativa Factory Chile®, header SaaS moderno, logo industrial y eslogan “Mantenimiento industrial en tus manos”.
 - Dashboard ejecutivo con incidencias abiertas/cerradas, OTs pendientes/terminadas, KPIs por técnico, contratista, cliente y empresa, tendencias mensuales, gráficos y ranking de desempeño.
 - Crear, guardar y listar incidencias desde la PWA.
 - Historial unificado de incidencias, órdenes de trabajo, GPS, dictado, fotos, sincronización e IA.
@@ -14,7 +14,7 @@ Plataforma ejecutable de mantenimiento industrial para **GlobalTech Servicios In
 - Dictado por voz mediante Web Speech API cuando el navegador lo soporta.
 - Fotos antes/después usando cámara o selector de archivos móvil.
 - Diagnóstico visual IA funcional con foto desde cámara/galería, criticidad, riesgo operacional, materiales sugeridos, recomendación técnica, confianza e informe automático.
-- Exportación de PDF técnico GlobalTech desde el navegador con logo, fotos, firma, cliente, técnico, OT, observaciones, recomendaciones y pie legal dinámico.
+- Exportación de PDF técnico Factory Chile® desde el navegador con logo, fotos, firma, cliente, técnico, OT, observaciones, recomendaciones y pie legal dinámico.
 - Exportación Excel real compatible con incidencias, órdenes de trabajo, técnicos, contratistas, clientes, KPI y dashboard ejecutivo.
 - Biblioteca documental con manuales PDF, planos, procedimientos, fotografías técnicas, fichas técnicas, historial y búsqueda rápida.
 - Chat IA interno para observaciones, recomendaciones, informes, diagnósticos y consultas operacionales.
@@ -30,7 +30,7 @@ Plataforma ejecutable de mantenimiento industrial para **GlobalTech Servicios In
 ## Arquitectura
 
 ```txt
-apps/web        PWA web nativa GlobalTech con GPS, voz, fotos, PDF, Service Worker e IndexedDB
+apps/web        PWA web nativa Factory Chile® con GPS, voz, fotos, PDF, Service Worker e IndexedDB
 apps/api        API Node.js nativa con HTTP, endpoints de incidencias, sincronización e IA
 packages/shared Contratos, modelos de dominio y cálculo de KPIs
 packages/ai     Adaptadores IA multi-proveedor para OpenAI, LM Studio y Ollama

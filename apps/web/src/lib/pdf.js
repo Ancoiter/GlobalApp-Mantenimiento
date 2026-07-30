@@ -51,7 +51,7 @@ export function printTechnicalPdf({ order, client, asset, technician, contractor
         <h2>Fotos después</h2><div class="photo-grid">${renderPhotos(afterPhotos, 'Foto después')}</div>
         <h2>Firma digital</h2><div class="box signature">${signature?.dataUrl?.startsWith('data:text') ? decodeTextDataUrl(signature.dataUrl) : signature ? 'Firma registrada como evidencia adjunta.' : 'Sin firma registrada.'}</div>
         <h2>Historial</h2><div class="box">${(order.history ?? []).map((event) => `<small>${event.at} · ${event.actorId} · ${event.message}</small>`).join('')}</div>
-        <div class="footer">${footer}<br>Este informe fue generado digitalmente mediante GLOBALAPP+IA. Contribuyendo a la reducción del uso de papel y a la sostenibilidad ambiental.</div>
+        <div class="footer">${footer}<br>Este informe fue generado digitalmente mediante FACTORY CHILE®. Contribuyendo a la reducción del uso de papel y a la sostenibilidad ambiental.</div>
         <script>window.print()</script>
       </body>
     </html>`;
